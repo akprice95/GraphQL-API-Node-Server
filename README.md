@@ -9,7 +9,6 @@ This example shows how to implement a **GraphQL server with JavaScript (Node.js)
 Install npm dependencies:
 
 ```
-cd into project
 npm install
 ```
 
