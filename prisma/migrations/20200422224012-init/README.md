@@ -1,12 +1,12 @@
-# Migration `20200422134038-init`
+# Migration `20200422224012-init`
 
-This migration has been generated at 4/22/2020, 1:40:38 PM.
+This migration has been generated at 4/22/2020, 10:40:12 PM.
 You can check out the [state of the schema](./schema.prisma) after the migration.
 
 ## Database Steps
 
 ```sql
-CREATE TABLE "public"."stats" (
+CREATE TABLE "public"."Stats" (
     "GamerTag" text  NOT NULL DEFAULT '',
     "KD" Decimal(65,30)  NOT NULL DEFAULT 0,
     "Platform" text  NOT NULL DEFAULT '',
@@ -22,7 +22,7 @@ CREATE TABLE "public"."stats" (
 
 ```diff
 diff --git schema.prisma schema.prisma
-migration ..20200422134038-init
+migration ..20200422224012-init
 --- datamodel.dml
 +++ datamodel.dml
 @@ -1,0 +1,18 @@
@@ -35,7 +35,7 @@ migration ..20200422134038-init
 +  provider = "prisma-client-js"
 +}
 +
-+model stats {
++model Stats {
 +  id        String   @default(cuid()) @id
 +  createdAt DateTime @default(now())
 +  updatedAt DateTime @updatedAt

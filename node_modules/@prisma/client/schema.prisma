@@ -7,7 +7,7 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model stats {
+model Stats {
   id        String   @default(cuid()) @id
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

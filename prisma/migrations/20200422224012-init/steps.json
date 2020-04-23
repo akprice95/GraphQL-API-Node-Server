@@ -25,11 +25,11 @@
     },
     {
       "tag": "CreateModel",
-      "model": "stats"
+      "model": "Stats"
     },
     {
       "tag": "CreateField",
-      "model": "stats",
+      "model": "Stats",
       "field": "id",
       "type": "String",
       "arity": "Required"
@@ -39,7 +39,7 @@
       "location": {
         "path": {
           "tag": "Field",
-          "model": "stats",
+          "model": "Stats",
           "field": "id"
         },
         "directive": "default"
@@ -51,7 +51,7 @@
         "tag": "Directive",
         "path": {
           "tag": "Field",
-          "model": "stats",
+          "model": "Stats",
           "field": "id"
         },
         "directive": "default"
@@ -64,7 +64,7 @@
       "location": {
         "path": {
           "tag": "Field",
-          "model": "stats",
+          "model": "Stats",
           "field": "id"
         },
         "directive": "id"
@@ -72,7 +72,7 @@
     },
     {
       "tag": "CreateField",
-      "model": "stats",
+      "model": "Stats",
       "field": "createdAt",
       "type": "DateTime",
       "arity": "Required"
@@ -82,7 +82,7 @@
       "location": {
         "path": {
           "tag": "Field",
-          "model": "stats",
+          "model": "Stats",
           "field": "createdAt"
         },
         "directive": "default"
@@ -94,7 +94,7 @@
         "tag": "Directive",
         "path": {
           "tag": "Field",
-          "model": "stats",
+          "model": "Stats",
           "field": "createdAt"
         },
         "directive": "default"
@@ -104,7 +104,7 @@
     },
     {
       "tag": "CreateField",
-      "model": "stats",
+      "model": "Stats",
       "field": "updatedAt",
       "type": "DateTime",
       "arity": "Required"
@@ -114,7 +114,7 @@
       "location": {
         "path": {
           "tag": "Field",
-          "model": "stats",
+          "model": "Stats",
           "field": "updatedAt"
         },
         "directive": "updatedAt"
@@ -122,28 +122,28 @@
     },
     {
       "tag": "CreateField",
-      "model": "stats",
+      "model": "Stats",
       "field": "name",
       "type": "String",
       "arity": "Required"
     },
     {
       "tag": "CreateField",
-      "model": "stats",
+      "model": "Stats",
       "field": "KD",
       "type": "Float",
       "arity": "Required"
     },
     {
       "tag": "CreateField",
-      "model": "stats",
+      "model": "Stats",
       "field": "GamerTag",
       "type": "String",
       "arity": "Required"
     },
     {
       "tag": "CreateField",
-      "model": "stats",
+      "model": "Stats",
       "field": "Platform",
       "type": "String",
       "arity": "Required"
