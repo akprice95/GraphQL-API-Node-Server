@@ -19,6 +19,9 @@ declare global {
 }
 
 export interface NexusGenInputs {
+  StatsWhereUniqueInput: { // input type
+    id?: string | null; // String
+  }
 }
 
 export interface NexusGenEnums {
@@ -37,13 +40,17 @@ export interface NexusGenRootTypes {
 }
 
 export interface NexusGenAllTypes extends NexusGenRootTypes {
+  StatsWhereUniqueInput: NexusGenInputs['StatsWhereUniqueInput'];
 }
 
 export interface NexusGenFieldTypes {
   Mutation: { // field return type
     createStats: NexusGenRootTypes['Stats']; // Stats!
+    deleteOneStats: NexusGenRootTypes['Stats'] | null; // Stats
+    updateStats: NexusGenRootTypes['Stats']; // Stats!
   }
   Query: { // field return type
+    filterStat: NexusGenRootTypes['Stats'][]; // [Stats!]!
     Stat: NexusGenRootTypes['Stats'] | null; // Stats
     Stats: NexusGenRootTypes['Stats'][]; // [Stats!]!
   }
@@ -51,7 +58,8 @@ export interface NexusGenFieldTypes {
     createdAt: any; // DateTime!
     GamerTag: string; // String!
     id: string; // String!
-    KD: number; // Float!
+    KD: string; // String!
+    name: string; // String!
     Platform: string; // String!
     updatedAt: any; // DateTime!
   }
@@ -61,18 +69,27 @@ export interface NexusGenArgTypes {
   Mutation: {
     createStats: { // args
       GamerTag?: string | null; // String
-      id: string; // ID!
       KD?: string | null; // String
-      name: string; // String!
+      name?: string | null; // String
+      Platform?: string | null; // String
+    }
+    deleteOneStats: { // args
+      where: NexusGenInputs['StatsWhereUniqueInput']; // StatsWhereUniqueInput!
+    }
+    updateStats: { // args
+      GamerTag?: string | null; // String
+      id?: string | null; // ID
+      KD?: string | null; // String
+      name?: string | null; // String
       Platform?: string | null; // String
     }
   }
   Query: {
+    filterStat: { // args
+      searchString?: string | null; // String
+    }
     Stat: { // args
       id?: string | null; // ID
-    }
-    Stats: { // args
-      searchString?: string | null; // String
     }
   }
 }
@@ -84,7 +101,7 @@ export interface NexusGenInheritedFields {}
 
 export type NexusGenObjectNames = "Mutation" | "Query" | "Stats";
 
-export type NexusGenInputNames = never;
+export type NexusGenInputNames = "StatsWhereUniqueInput";
 
 export type NexusGenEnumNames = never;
 

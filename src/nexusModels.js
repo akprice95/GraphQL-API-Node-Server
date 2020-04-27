@@ -5,6 +5,7 @@ const Stats = objectType({
   definition(t) {
     t.model.id()
     t.model.createdAt()
+    t.model.name()
     t.model.updatedAt()
     t.model.GamerTag()
     t.model.KD()

@@ -12,7 +12,7 @@ model Stats {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   name      String
-  KD        Float
+  KD        String
   GamerTag  String
   Platform  String
 }

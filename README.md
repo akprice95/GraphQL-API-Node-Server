@@ -49,8 +49,8 @@ npm run start
 #### Get all stats
 
 ```graphql
-query getAllStats {
-  Stat {
+query getAllStat {
+  Stats {
     id
     updatedAt
     name
@@ -65,7 +65,7 @@ query getAllStats {
 
 ```graphql
 query getStat {
-  Stat(id: "ck8hvilvm0003xh14cgqfng3r") {
+  Stat(id: "ck9hrouek00008e5d6g3vnb2v") {
     name
     KD
     GamerTag
@@ -92,13 +92,16 @@ query filterStat {
 #### Create Stat
 
 ```graphql
-mutation createStat {
-  createStat(name: "New Stat Example", age: 0) {
-    id
-    updatedAt
+mutation createStats {
+  createStats(
+    name: "test category"
+    GamerTag: "test from prisma "
+    KD: "50.2"
+    Platform: "test"
+  ) {
     name
-    KD
     GamerTag
+    KD
     Platform
   }
 }
@@ -107,13 +110,18 @@ mutation createStat {
 #### Update Stat
 
 ```graphql
-mutation updateStat {
-  updateStat(id: "ck8hviluf0000xh14ta14rgx7", name: "Updated name", age: 170) {
+mutation updateStats {
+  updateStats(
+    id: "ck9hwy9kx0001ai5d9mc28mli"
+    name: "test category"
+    GamerTag: "test from prisma "
+    KD: "50.2"
+    Platform: "test"
+  ) {
     id
-    updatedAt
     name
-    KD
     GamerTag
+    KD
     Platform
   }
 }
@@ -124,10 +132,12 @@ mutation updateStat {
 #### Delete Stat
 
 ```graphql
-mutation deleteOneStat {
-  deleteOneStat(where: { id: "ck8hviluz0001xh14yaojpumg" }) {
+mutation deleteOne {
+  deleteOneStats(where: { id: "ck9hvgmhc0000nt5dqsd459h2" }) {
     id
     name
+    Platform
+    GamerTag
   }
 }
 ```

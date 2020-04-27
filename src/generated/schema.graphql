@@ -5,19 +5,27 @@
 scalar DateTime
 
 type Mutation {
-  createStats(GamerTag: String, id: ID!, KD: String, name: String!, Platform: String): Stats!
+  createStats(GamerTag: String, KD: String, name: String, Platform: String): Stats!
+  deleteOneStats(where: StatsWhereUniqueInput!): Stats
+  updateStats(GamerTag: String, id: ID, KD: String, name: String, Platform: String): Stats!
 }
 
 type Query {
+  filterStat(searchString: String): [Stats!]!
   Stat(id: ID): Stats
-  Stats(searchString: String): [Stats!]!
+  Stats: [Stats!]!
 }
 
 type Stats {
   createdAt: DateTime!
   GamerTag: String!
   id: String!
-  KD: Float!
+  KD: String!
+  name: String!
   Platform: String!
   updatedAt: DateTime!
+}
+
+input StatsWhereUniqueInput {
+  id: String
 }

@@ -17,6 +17,13 @@ export const Query = queryType({
 
     t.list.field('Stats', {
       type: 'Stats',
+      resolve: (parent, arg, ctx) => {
+        return ctx.prisma.stats.findMany()
+      },
+    })
+
+    t.list.field('filterStat', {
+      type: 'Stats',
       args: {
         searchString: stringArg({ nullable: true }),
       },

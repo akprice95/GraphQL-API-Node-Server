@@ -131,7 +131,7 @@
       "tag": "CreateField",
       "model": "Stats",
       "field": "KD",
-      "type": "Float",
+      "type": "String",
       "arity": "Required"
     },
     {
